@@ -1,10 +1,16 @@
 import React from 'react';
 import { createBrowserRouter } from "react-router";
+import Home from '../Pages/Home';
+import Products from '../Pages/Products';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello World</div>,
+    Component: Home
+  },
+  {
+    path: "/products",
+    Component: Products
   },
 ]);
 
