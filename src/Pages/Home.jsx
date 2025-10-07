@@ -1,10 +1,15 @@
 import React from 'react';
+import { useLoaderData } from 'react-router';
 
 const Home = () => {
+    const products = useLoaderData();
+    console.log(products);
     
     return (
         <div>
-            <h1>Home compo</h1>
+            {
+                products.map(product => <h1>{product.name}</h1>)
+            }
         </div>
     );
 };
